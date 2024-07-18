@@ -6,10 +6,29 @@ build-backend = "hatchling.build"
 
 [project]
 name = "example-package-LauraSchoenhals"
-version = "0.1.0"
+dynamic = ["version"]
 dependencies = [
   "numpy"
 ]
 
+authors = [
+  {name = "Laura Schoenhals", email = "las578@drexel.edu"},
+]
+
+description = "small example package where I learn toml"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
+
 [project.optional-dependencies]
 test = ["pytest"]
+
+[project.urls]
+"Homepage" = "https://<LauraSchoenhals>.github.io/example-LauraSchoenhals"
+"Source Code" = "https://github.com/<LauraSchoenhals>/example-package-LauraSchoenhals"
+
+[tool.hatch]
+version.path = "src/example_package_LauraSchoenhals/__init__.py"
